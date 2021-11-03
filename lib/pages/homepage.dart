@@ -1,3 +1,4 @@
+import 'package:bwa_chatty/pages/chat_pages.dart';
 import 'package:bwa_chatty/widgets/chat_tile.dart';
 import 'package:flutter/material.dart';
 import '../theme.dart';
@@ -88,12 +89,20 @@ class HomePage extends StatelessWidget {
                       "Groups",
                       style: titleTextStyle,
                     ),
-                    ChatTile(
-                      imageUrl: 'assets/images/group1.png',
-                      name: "Jakarta Fair",
-                      subText: "Why does everyone ca...",
-                      time: "11:11",
-                      unread: false,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ChatPages()));
+                      },
+                      child: ChatTile(
+                        imageUrl: 'assets/images/group1.png',
+                        name: "Jakarta Fair",
+                        subText: "Why does everyone ca...",
+                        time: "11:11",
+                        unread: false,
+                      ),
                     ),
                     ChatTile(
                       imageUrl: 'assets/images/group2.png',
