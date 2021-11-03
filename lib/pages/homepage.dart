@@ -67,6 +67,7 @@ class HomePage extends StatelessWidget {
                     name: "Gabriela",
                     subText: "I saw it clearly and mig...",
                     time: "2:30",
+                    unread: false,
                   ),
                 ],
               ),

@@ -6,12 +6,14 @@ class ChatTile extends StatelessWidget {
   final String name;
   final String subText;
   final String time;
+  final bool unread;
 
   ChatTile({
     this.imageUrl = '',
     this.name = '',
     this.subText = '',
     this.time = '',
+    this.unread = true,
   });
 
   @override
@@ -35,8 +37,12 @@ class ChatTile extends StatelessWidget {
                 name,
                 style: titleTextStyle,
               ),
-              Text(subText,
-                  style: subtitleTextStyle.copyWith(color: blackColor))
+              Text(
+                subText,
+                style: unread
+                    ? subtitleTextStyle.copyWith(color: blackColor)
+                    : subtitleTextStyle,
+              )
             ],
           ),
           Spacer(),
