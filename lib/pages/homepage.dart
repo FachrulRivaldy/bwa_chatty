@@ -1,5 +1,6 @@
+import 'package:bwa_chatty/widgets/chat_tile.dart';
 import 'package:flutter/material.dart';
-import 'theme.dart';
+import '../theme.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -55,37 +56,17 @@ class HomePage extends StatelessWidget {
                     "Friends",
                     style: titleTextStyle,
                   ),
-                  SizedBox(
-                    height: 16,
+                  ChatTile(
+                    imageUrl: 'assets/images/friend1.png',
+                    name: "Joshuer",
+                    subText: "Sorry, you’re not my ty...",
+                    time: "Now",
                   ),
-                  Row(
-                    children: [
-                      Image.asset(
-                        'assets/images/friend1.png',
-                        height: 55,
-                        width: 55,
-                      ),
-                      SizedBox(
-                        width: 12,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Joshuer",
-                            style: titleTextStyle,
-                          ),
-                          Text("Sorry, you’re not my ty...",
-                              style: subtitleTextStyle.copyWith(
-                                  color: blackColor)),
-                        ],
-                      ),
-                      Spacer(),
-                      Text(
-                        "Now",
-                        style: subtitleTextStyle,
-                      ),
-                    ],
+                  ChatTile(
+                    imageUrl: 'assets/images/friend2.png',
+                    name: "Gabriela",
+                    subText: "I saw it clearly and mig...",
+                    time: "2:30",
                   ),
                 ],
               ),
